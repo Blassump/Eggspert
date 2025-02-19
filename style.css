@@ -1,0 +1,120 @@
+body {
+    font-family: "Pixelify Sans", serif;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.header {
+    flex-direction: column; /* จัดให้อยู่แนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    display: flex;
+    align-items: center;  /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: start;  /* ชิดซ้าย */
+    gap: 10px;  /* ระยะห่างระหว่างโลโก้กับข้อความ */
+}
+
+.logo {
+    width: 100px;  /* ปรับขนาดโลโก้ */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff9900;
+}
+
+.container {
+    position: relative; /* กำหนดให้เป็นจุดอ้างอิง */
+    margin-top: 50px;
+    padding: 50px;
+    background: white;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* ป้องกันพื้นหลังล้น */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo.gif'); /* ใช้ GIF เป็นพื้นหลัง */
+    background-size: cover; /* ปรับให้เต็มพื้นที่ */
+    background-position: center; /* จัดให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /* ป้องกันการซ้ำ */
+    opacity: 0.2; /* ปรับความโปร่งแสงของพื้นหลัง (0.0 = โปร่งใส, 1.0 = ทึบ) */
+}
+
+
+h1 {
+    font-size: 50px;
+    color: #ff9900;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;  /* ระยะห่างระหว่างปุ่ม */
+    justify-content: center; /* จัดตรงกลาง */
+    margin-top: 10px;
+    position: relative;
+}
+
+button {
+    background-color: #ff9900 ;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Pixelify Sans", serif;
+}
+
+button:hover {
+    background-color: #e68a00 ;
+}
+
+select {
+    position: relative;
+    padding: 10px;
+    margin-top: 120px; /* เลื่อนกล่อง dropdown ลง */
+    font-size: 14px;
+    font-family:"Pixelify Sans", serif ;
+    border-radius: 15px;  /* ทำให้มุมโค้งมน */
+    border: 2px solid #ff9900; /* กำหนดขอบสีส้ม */
+    outline: none; /* ลบเส้นขอบสีฟ้าที่แสดงตอนคลิก */
+    background-color: white;
+    cursor: pointer;
+    appearance: none; /* ลบสไตล์พื้นฐานของเบราว์เซอร์ */
+    
+}
+
+.egglevel p {
+    font-size: 20px; /* ปรับขนาดตัวอักษร */
+    font-weight: bold; /* ทำให้ตัวหนาขึ้น (ถ้าต้องการ) */
+    color: #333; /* เปลี่ยนสีตัวอักษร (ถ้าต้องการ) */
+    text-align: center; /* จัดให้อยู่กึ่งกลาง (ถ้าต้องการ) */
+}
+
+.egg-animation {
+    position: absolute;
+    top: 53%; /* ปรับให้อยู่สูงกว่ากล่องเลือก */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px; /* ขยายขนาดของไข่ */
+    height: auto;
+    animation: bounce 1s infinite alternate ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    100% { transform: translate(-50%, -50%) translateY(-10px); }
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eggspert</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/gif" href="logo.gif"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Eggspert</h1>
+        </div>
+        <div class="egglevel">
+            <p>Choose the level of egg doneness:</p>
+        </div>
+        <select id="eggType">
+            <option value="4">Soft-boiled egg (4 minutes)</option>
+            <option value="6">Medium-boiled egg (6 minutes)</option>
+            <option value="10">Hard-boiled egg (10 minutes)</option>
+        </select>
+        <img src="Egg.png" alt="Boiling Egg" class="egg-animation">
+        <div class="button-group">
+            <button onclick="startTimer()">Start</button>
+            <button onclick="stopTimer()">Stop</button>
+        </div>
+        <h2 id="countdown">00:00</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
